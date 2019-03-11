@@ -1,10 +1,11 @@
 const path = require('path');
+const webpack = require('webpack');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: { main: './src/index.ts' },
+  entry: { main: ['./src/index.ts', './src/scss/main.scss'] },
   devtool: 'inline-source-map',
   module: {
     rules: [
@@ -37,12 +38,12 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: '[name].css'
     }),
     new HtmlWebpackPlugin({
       inject: false,
