@@ -8,7 +8,7 @@ const port = 5000;
 const app = express();
 const router = express.Router();
 const cityRoutes = require('./routes/cityRoutes')(router);
-// const casinoRoutes = require('./routes/casinoRoutes')(router);
+const casinoRoutes = require('./routes/casinoRoutes')(router);
 
 mongoose.connect(config.uri, err => {
   err ? console.log('Could not connect') : console.log('You have connected');
@@ -27,7 +27,7 @@ app.use(
 );
 app.use(bodyParser.json());
 app.use('/city', cityRoutes);
-// app.use('/casino', casinoRoutes);
+app.use('/casino', casinoRoutes);
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);

@@ -4,8 +4,12 @@ const { Schema } = mongoose;
 const casinoSchema = new Schema({
   name: String,
   category: String, // from ../utils/category
-  description: String
+  description: String,
+  // Would it work like this?
+  devices: [
+    { x: Number, y: Number, apparatusType: String, orientation: Number }
+  ]
 });
 
 // no mongoose#model if not making a connection
-module.exports = casinoSchema;
+module.exports = mongoose.model('casino', casinoSchema);
