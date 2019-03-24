@@ -1,8 +1,8 @@
 // might not need this file if no seperate casino collection
 const Casino = require('../models/Casino');
-const config = require('../config/database');
-const Category = require('../utils/category');
-const Apparatus = require('../utils/apparatus');
+// const config = require('../config/database');
+// const Category = require('../utils/category');
+// const Apparatus = require('../utils/apparatus');
 
 module.exports = router => {
   router.get('/casinos', (req, res) => {
@@ -26,6 +26,36 @@ module.exports = router => {
         }
       }
     });
+  });
+
+  router.get('/casino/:id', (req, res) => {
+    if (!req.params.id) {
+      res.json({
+        success: false,
+        message: 'No ID was provided'
+      });
+    } else {
+      Casino.findById(req.params.id, (err, casino) => {
+        if (err) {
+          res.json({
+            success: false,
+            message: 'Not a valid casino'
+          });
+        } else {
+          if (!casino) {
+            res.json({
+              success: false,
+              message: 'Casino not found'
+            });
+          } else {
+            res.json({
+              success: true,
+              casino
+            });
+          }
+        }
+      });
+    }
   });
 
   // HACK for testing

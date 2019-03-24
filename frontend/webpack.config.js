@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const TSLintPlugin = require('tslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -9,6 +10,16 @@ module.exports = {
   devtool: 'inline-source-map',
   module: {
     rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -32,7 +43,7 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: path.join(__dirname, 'dist')
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
@@ -50,6 +61,9 @@ module.exports = {
       hash: true,
       template: './src/index.html',
       filename: 'index.html'
+    }),
+    new TSLintPlugin({
+      files: ['./src/**/*.ts']
     })
   ]
 };
