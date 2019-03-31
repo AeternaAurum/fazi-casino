@@ -10,13 +10,18 @@
   <body>
     <div class="body-container">
       <section class="vertical-menu">
-        <input type="text" placeholder="search" />
-        <input type="radio" name="filter" value="all" />
-        <input type="radio" name="filter" value="elite roller" />
-        <input type="radio" name="filter" value="high stakes" />
-        <input type="radio" name="filter" value="medium size" />
-        <input type="radio" name="filter" value="small" />
-        <select name="language" id="language">
+        <input class="search" type="text" placeholder="search" />
+        <input id="all" type="radio" name="filter" value="all" />
+        <label for="all">All</label>
+        <input id="elite" type="radio" name="filter" value="elite roller" />
+        <label for="elite">Elite Roller</label>
+        <input id="high" type="radio" name="filter" value="high stakes" />
+        <label for="high">High Stakes</label>
+        <input id="medium" type="radio" name="filter" value="medium size" />
+        <label for="medium">Medium Size</label>
+        <input id="small" type="radio" name="filter" value="small" />
+        <label for="small">Small</label>
+        <select class="language" name="language" id="language">
           <option value="english">English</option>
           <option value="serbian">Serbian</option>
         </select>

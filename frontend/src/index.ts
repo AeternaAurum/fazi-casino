@@ -8,11 +8,8 @@ function getCities() {
     .then(res => res.json())
     .then(data => data.cities)
     .then((cities: [City]) => {
-      // const base64Image = cities[1].image;
-      // document
-      //   .querySelector('#berlin')!
-      //   .setAttribute('src', 'data:image/jpg;base64,' + base64Image);
-      const citiesDOM = document.querySelector('.cities');
+      const citiesDOM = document.querySelector('.main-container');
+      console.log(cities);
       cities.forEach((city: City) => {
         const cityDOM = createDOMCity(city);
         citiesDOM!.appendChild(cityDOM);
@@ -40,9 +37,9 @@ function createDOMCity(city: City): HTMLDivElement {
   return cityDOM;
 }
 
-// document.addEventListener('load', () => {
-//   getCities();
-// });
+window.addEventListener('load', () => {
+  getCities();
+});
 
 helloName('TEST');
 console.log('hello world');

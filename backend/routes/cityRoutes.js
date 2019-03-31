@@ -21,7 +21,7 @@ module.exports = router => {
           });
         } else {
           // Maybe this isn't how you are supposed to query for
-          // a referenced document? Maybe .then() on the 
+          // a referenced document? Maybe .then() on the
           // referenced document
           const casinos = [];
           cities.forEach(city => {
@@ -48,7 +48,7 @@ module.exports = router => {
               cities,
               casinos
             });
-          }, 10);
+          }, 100);
         }
       }
     });
