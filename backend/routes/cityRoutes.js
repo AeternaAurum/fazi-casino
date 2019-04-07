@@ -11,42 +11,41 @@ module.exports = router => {
       if (err) {
         res.json({
           success: false,
-          message: err
+          message: err,
         });
       } else {
         if (!cities) {
           res.json({
             success: false,
-            message: 'No cities found'
+            message: 'No cities found',
           });
         } else {
           // Maybe this isn't how you are supposed to query for
           // a referenced document? Maybe .then() on the
           // referenced document
           const casinos = [];
-          cities.forEach(city => {
-            city.casinos.forEach(id => {
+
+          for (const city of cities) {
+            for (const id of city.casinos) {
               Casino.findById(id, (err, casino) => {
                 if (err) {
                   res.json({
                     success: false,
-                    message: err
+                    message: err,
                   });
                 } else {
-                  console.log(casino);
                   casinos.push(casino);
-                  console.log(casinos);
                 }
               });
-            });
-          });
+            }
+          }
           // Very hacky solution, find a better way
           setTimeout(() => {
             console.log(casinos);
             res.json({
               success: true,
               cities,
-              casinos
+              casinos,
             });
           }, 100);
         }
@@ -58,25 +57,25 @@ module.exports = router => {
     if (!req.params.id) {
       res.json({
         success: false,
-        message: 'No ID was provided'
+        message: 'No ID was provided',
       });
     } else {
       City.findById(req.params.id, (err, city) => {
         if (err) {
           res.json({
             success: false,
-            message: 'Not a valid city'
+            message: 'Not a valid city',
           });
         } else {
           if (!city) {
             res.json({
               success: false,
-              message: 'City not found'
+              message: 'City not found',
             });
           } else {
             res.json({
               success: true,
-              city
+              city,
             });
           }
         }

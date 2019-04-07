@@ -6,6 +6,11 @@ function helloName(name: string): void {
 function getCities() {
   fetch('http://localhost:5000/city/cities')
     .then(res => res.json())
+    // .then(data => {
+    //   sessionStorage.setItem('cities', JSON.stringify(data.cities))
+    //   sessionStorage.setItem('casinos', JSON.stringify(data.casinos))
+    //   return data.cities;
+    // })
     .then(data => data.cities)
     .then((cities: [City]) => {
       const citiesDOM = document.querySelector('.main-container');

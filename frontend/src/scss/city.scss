@@ -1,0 +1,77 @@
+ul {
+  display: block;
+
+  li {
+    color: red;
+  }
+}
+
+.main-container {
+  display: grid;
+  grid-template-areas:
+    'sidebar picture picture'
+    'sidebar casinos casino'
+    'sidebar city city';
+}
+
+.city-description {
+  grid-area: city;
+}
+
+.casino-description {
+  grid-area: casino;
+}
+
+.casinos {
+  grid-area: casinos;
+}
+
+.banner {
+  grid-area: picture;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  grid-column: 1 / 2;
+  height: 100%;
+  width: 1fr;
+  position: absolute;
+  background: rgb(252, 196, 70);
+  background: radial-gradient(
+    circle,
+    rgba(252, 196, 70, 1) 0%,
+    rgba(251, 127, 63, 1) 110%
+  );
+  overflow-x: hidden;
+
+  input[type='radio'] {
+    display: block;
+    padding: 12px;
+    visibility: hidden;
+
+    &:checked + label {
+      background-color: rgb(243, 205, 116);
+      border-radius: 10px 0px 0px 10px;
+    }
+  }
+
+  label {
+    display: block;
+    padding-left: 5px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 1px 1px #333;
+      border-radius: 10px;
+    }
+  }
+
+  .language {
+    position: absolute;
+    bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .search {
+    border-radius: 15px;
+  }
+}
