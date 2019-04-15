@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 const cors = require('cors');
+const WebSocket = require('ws');
 const port = 5000;
 
 const app = express();
@@ -17,12 +18,12 @@ mongoose.connect(config.uri, err => {
 // middlewares
 app.use(
   cors({
-    origin: 'http://localhost:8080'
+    origin: 'http://localhost:8080',
   })
 );
 app.use(
   bodyParser.urlencoded({
-    extended: true
+    extended: true,
   })
 );
 app.use(bodyParser.json());
@@ -31,4 +32,13 @@ app.use('/casino', casinoRoutes);
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
+});
+
+const wss = new WebSocket.Server({ port: 4200 });
+
+wss.on('connection', ws => {
+  ws.on('message', message => {
+    console.log(`received message => ${message}`);
+  });
+  ws.send('hello from server');
 });

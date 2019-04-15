@@ -5,7 +5,7 @@ function populate() {
   const titleDOM = document.querySelector('title');
   const casinoDOM = document.querySelector('.casino-list');
   const descriptionDOM = document.querySelector('.city-description');
-  const searchParams = new URLSearchParams(window.location.href);
+  const searchParams = new URLSearchParams(window.location.search);
 
   if (sessionStorage.getItem('cities') && sessionStorage.getItem('casinos')) {
     populateFromSessionStorage(
@@ -77,6 +77,6 @@ function populateFromSessionStorage(
 
 console.log('hello from city');
 
-// window.addEventListener('load', () => {
-//   populate();
-// });
+window.addEventListener('load', () => {
+  populate();
+});

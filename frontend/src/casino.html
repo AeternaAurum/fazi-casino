@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="sidebar">
+      <a href="city.html">City</a>
+      <input class="search" type="text" placeholder="search" />
+      <input id="all" type="radio" name="filter" value="all" />
+      <label for="all">All</label>
+      <input id="elite" type="radio" name="filter" value="elite roller" />
+      <label for="elite">Elite Roller</label>
+      <input id="high" type="radio" name="filter" value="high stakes" />
+      <label for="high">High Stakes</label>
+      <input id="medium" type="radio" name="filter" value="medium size" />
+      <label for="medium">Medium Size</label>
+      <input id="small" type="radio" name="filter" value="small" />
+      <label for="small">Small</label>
+      <select class="language" name="language" id="language">
+        <option value="english">English</option>
+        <option value="serbian">Serbian</option>
+      </select>
+    </section>
+    <div class="top-bar"></div>
+    <canvas id="canvas"> </canvas>
+    <section class="casino-items"></section>
+    <script src="pixi.js"></script>
+    <script src="casino.js"></script>
+  </body>
+</html>
