@@ -4,6 +4,6 @@ export interface Casino {
   category: string;
   decription: string;
   devices: [
-    { x: number; y: number; orientation: number; appratusType: string }
+    { x: number; y: number; orientation: number; apparatusType: string }
   ];
 }

@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf ./dist && webpack && cp ./pixi/pixi.js ./src/casino.html ./src/index.html ./src/city.html ./dist",
+    "build": "rm -rf ./dist && webpack && cp -r ./src/assets/ ./pixi/pixi.js ./src/casino.html ./src/index.html ./src/city.html ./dist",
     "watch": "webpack --watch",
     "dev": "webpack-dev-server"
   },

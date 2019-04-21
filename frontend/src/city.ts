@@ -17,9 +17,8 @@ function populate() {
   } else {
     populateFromDatabase(searchParams, titleDOM, descriptionDOM, casinoDOM);
   }
-
-  // TODO: fetch from database if not in sessionstorage
 }
+
 function populateFromDatabase(
   searchParams: URLSearchParams,
   titleDOM: HTMLTitleElement | null,
