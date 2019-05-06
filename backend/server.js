@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const config = require('./config/database');
 const cors = require('cors');
 const WebSocket = require('ws');
+const Casino = require('./models/Casino');
 const port = 5000;
 
 const app = express();
@@ -35,10 +36,33 @@ app.listen(port, () => {
 });
 
 const wss = new WebSocket.Server({ port: 4200 });
-
+let wsApparatus;
 wss.on('connection', ws => {
   ws.on('message', message => {
     console.log(`received message => ${message}`);
+    const apparatuses = JSON.parse(message);
+    console.log(apparatuses);
+    wsApparatus = [...apparatuses];
+    console.log('wsCasinos: ', wsApparatus);
+  });
+  ws.on('close', () => {
+    if (wsApparatus) {
+      Casino.findByIdAndUpdate(
+        wsApparatus[0].casinoId,
+        {
+          $set: {
+            devices: wsApparatus,
+          },
+        },
+        (err, res) => {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log(res);
+          }
+        }
+      );
+    }
   });
   ws.send('hello from server');
 });

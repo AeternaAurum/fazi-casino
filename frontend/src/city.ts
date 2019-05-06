@@ -3,11 +3,11 @@ import { City } from './shared/City';
 
 function populate() {
   const titleDOM = document.querySelector('title');
-  const casinoDOM = document.querySelector('.casino-list');
+  const casinoDOM = document.querySelector('.casinos');
   const descriptionDOM = document.querySelector('.city-description');
   const searchParams = new URLSearchParams(window.location.search);
 
-  if (sessionStorage.getItem('cities') && sessionStorage.getItem('casinos')) {
+  if (!sessionStorage.getItem('cities') && sessionStorage.getItem('casinos')) {
     populateFromSessionStorage(
       searchParams,
       titleDOM,
@@ -34,17 +34,20 @@ function populateFromDatabase(
     });
   fetch(`http://localhost:5000/city/city/${searchParams.get('id')}`)
     .then(res => res.json())
-    .then((city: City) => {
+    .then(data => {
+      const { city } = data;
       titleDOM!.textContent = city.name;
       descriptionDOM!.textContent = city.description;
+      console.log(city);
       const currentCasinos = casinos.filter((casino: Casino) =>
         city.casinos.includes(casino._id)
       );
       currentCasinos.forEach((casino: Casino) => {
-        const listItem = document.createElement('li');
+        const listItem = document.createElement('p');
         listItem.textContent = casino.name;
         casinoDOM!.appendChild(listItem);
       });
+      console.log(casinoDOM);
     });
 }
 
@@ -66,10 +69,12 @@ function populateFromSessionStorage(
     titleDOM!.textContent = currentCity.name;
     descriptionDOM!.textContent = currentCity.description;
     currentCasinos.forEach((casino: Casino) => {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement('p');
       listItem.textContent = casino.name;
+      console.log(listItem);
       casinoDOM!.appendChild(listItem);
     });
+    console.log(casinoDOM);
   }
   console.log(cities, casinos);
 }

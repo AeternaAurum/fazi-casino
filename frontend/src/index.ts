@@ -35,9 +35,14 @@ function createDOMCity(city: City): HTMLDivElement {
   const nameDOM = document.createElement('h2');
   nameDOM.textContent = city.name;
 
-  cityDOM.appendChild(imgDOM);
-  cityDOM.appendChild(descriptionDOM);
-  cityDOM.appendChild(nameDOM);
+  const linkDOM = document.createElement('a');
+  linkDOM.href = `city.html?id=${city._id}`;
+  linkDOM.classList.add('card');
+
+  linkDOM.appendChild(imgDOM);
+  linkDOM.appendChild(descriptionDOM);
+  linkDOM.appendChild(nameDOM);
+  cityDOM.appendChild(linkDOM);
   return cityDOM;
 }
 

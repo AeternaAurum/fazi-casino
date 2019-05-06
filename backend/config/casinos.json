@@ -1,0 +1,294 @@
+[
+  {
+    "_id": "5c875c4d36715e73a5148887",
+    "devices": ["5c875c4d36715e73a5148885", "5c875c4d36715e73a5148886"],
+    "name": "MGM Grand Hotel and Casino",
+    "category": "ELITE_ROLLER",
+    "description": "The best Casino in the world",
+    "__v": 0
+  },
+  {
+    "_id": "5c875e83d371557417d1cb2f",
+    "name": "High Star Casino",
+    "category": "ELITE_ROLLER",
+    "description": "The best Casino in the world",
+    "devices": [
+      {
+        "_id": "5c875e83d371557417d1cb31",
+        "x": 134,
+        "y": 155,
+        "orientation": 0
+      },
+      {
+        "_id": "5c875e83d371557417d1cb30",
+        "x": 450,
+        "y": 500,
+        "orientation": 90
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "5c875e8d5a56cc7423bf8a67",
+    "name": "MGM Grand Hotel and Casino",
+    "category": "ELITE_ROLLER",
+    "description": "The best Casino in the world",
+    "devices": [
+      {
+        "_id": "5ccfec9ec97eb80fa37b262d",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 269.50390625,
+        "y": 84.2734375
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b262c",
+        "apparatusType": "SLOT_MACHINE",
+        "orientation": 90.00024264,
+        "x": 76.66015625,
+        "y": 260.515625
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b262b",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 354.09765625,
+        "y": 336.7109375
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b262a",
+        "apparatusType": "SLOT_MACHINE",
+        "orientation": 90.00024264,
+        "x": 165.73828125,
+        "y": 196.359375
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2629",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 374.140625,
+        "y": 274.4296875
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2628",
+        "apparatusType": "SLOT_MACHINE",
+        "orientation": 90.00024264,
+        "x": 266.94140625,
+        "y": 305.31640625
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2627",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 383.703125,
+        "y": 323.47265625
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2626",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 421.05078125,
+        "y": 328.8828125
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2625",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 88.4140625,
+        "y": 220.8203125
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2624",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 460.48046875,
+        "y": 363.71484375
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2623",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 207.08203125,
+        "y": 117.68359375
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2622",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 115.55859375,
+        "y": 130.68359375
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2621",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 423.12890625,
+        "y": 125.2109375
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2620",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 422.48828125,
+        "y": 50.65234375
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b261f",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 334.3984375,
+        "y": 98.60546875
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b261e",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 0,
+        "x": 125.1328125,
+        "y": 72.68359375
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b261d",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 0,
+        "x": 299.59375,
+        "y": 162.6953125
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b261c",
+        "apparatusType": "SLOT_MACHINE",
+        "orientation": 0,
+        "x": 153.88671875,
+        "y": 273.33203125
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b261b",
+        "apparatusType": "SLOT_MACHINE",
+        "orientation": 0,
+        "x": 256,
+        "y": 256
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b261a",
+        "apparatusType": "SLOT_MACHINE",
+        "orientation": 0,
+        "x": 256,
+        "y": 256
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2619",
+        "apparatusType": "ROULETTE_MACHINE",
+        "orientation": 0,
+        "x": 392.59375,
+        "y": 156.7578125
+      },
+      {
+        "_id": "5ccfec9ec97eb80fa37b2618",
+        "apparatusType": "ROULETTE_MACHINE",
+        "orientation": 0,
+        "x": 183.3203125,
+        "y": 248.9921875
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": "5c875fc81ca994743a1d7b34",
+    "name": "Diamond Casino",
+    "category": "ELITE_ROLLER",
+    "description": "The best Casino in the world",
+    "devices": [
+      {
+        "_id": "5ccf5ca7212a3c0c839303fd",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 387,
+        "y": 452
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303fc",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 194,
+        "y": 423.16015625
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303fb",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 78.52734375,
+        "y": 249.8671875
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303fa",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 260.28515625,
+        "y": 315.66796875
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303f9",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 440.63671875,
+        "y": 250.1640625
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303f8",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 287.31640625,
+        "y": 230.9375
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303f7",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 472.98046875,
+        "y": 87.2578125
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303f6",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 196.328125,
+        "y": 284.69140625
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303f5",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 361.27734375,
+        "y": 273.84765625
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303f4",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 357.6328125,
+        "y": 108.65625
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303f3",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 90.00024264,
+        "x": 231.3359375,
+        "y": 92.1015625
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303f2",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 0,
+        "x": 155.828125,
+        "y": 183.76953125
+      },
+      {
+        "_id": "5ccf5ca7212a3c0c839303f1",
+        "apparatusType": "BLACKJACK_TABLE",
+        "orientation": 0,
+        "x": 117.34765625,
+        "y": 98.69140625
+      }
+    ],
+    "__v": 0
+  }
+]
